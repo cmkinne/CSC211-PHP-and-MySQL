@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php // Script 4.2 - handle_calc2.php
-    /* This script takes values from calculator.html and performs
+    /* This script takes values from calculation2.html and performs
     total cost and monthly payment calculations. */
 
     // Get values from the $_POST array:
