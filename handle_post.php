@@ -16,16 +16,17 @@
 
     // Create the full name variable:
     $name = $first_name . ' ' . $last_name;
+	
+	// Get a word count
+	$words = str_word_count($posting);
+	
+	// Get a snippet of the Posting
+	$posting = substr($posting, 0, 50);
 
     // Print a message
     print "<div>Thank you, $name, for your posting:
-	<p>$posting</p></div>";
-
-	// Make a link to another page:
-	$name = urlencode($name);
-	$email = urlencode($_POST['email']);
-	print "<p>Click <a href=\"thanks.php?
-	name=$name&email=$email\">here</a> to continue.</p>";
+	<p>$posting...</p>
+	<p>($words words)</p></div>";
 
     ?>
 </body>
