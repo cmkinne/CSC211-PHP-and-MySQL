@@ -5,7 +5,7 @@
     <title>Add a Quotation</title>
 </head>
 <body>
-    <?php // Script 11.1 - add_quote.php
+    <?php // Script 11.2 - add_quote.php
     /* This script displays and handles an HTML form. This script takes text input and stores it in a text file. */
 
     // Identify the file to use:
@@ -19,7 +19,7 @@
                 if (is_writable($file)) {
                     // Confirm that the file is writable.
 
-                    file_put_contents($file, $_POST['quote'] . PHP_EOL, FILE_APPEND); // Write the data
+                    file_put_contents($file, $_POST['quote'] . PHP_EOL, FILE_APPEND | LOCK_EX); // Write the data
 
                     // Print a message:
                     print '<p>Your quotation has been stored</p>';
